@@ -1,0 +1,18 @@
+-- 使用数据库socketdemo
+use socketdemo;
+
+-- 创建用户表
+CREATE TABLE tb_user(
+  `id` INT NOT NULL AUTO_INCREMENT COMMENT '用户ID',
+  `username` VARCHAR(20) NOT NULL COMMENT '用户账号',
+  `password` VARCHAR(30) NOT NULL COMMENT '用户密码',
+  PRIMARY KEY (id)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='用户表';
+
+-- 文件表
+CREATE TABLE tb_file(
+  `fid` INT NOT NULL AUTO_INCREMENT COMMENT '文件ID',
+  `fname` VARCHAR (50) NOT NULL COMMENT '文件名',
+  `fcontent` BLOB COMMENT NOT NULL '文件内容',
+  PRIMARY KEY (fid)
+)ENGINE=InnoDB AUTO_INCREMENT=1000 DEFAULT CHARSET=utf8 COMMENT='文件表';
